@@ -1,0 +1,11 @@
+---
+- name: Install Meson
+  community.general.rpm_ostree_pkg:
+    name: "{{ item }}"
+    state: present
+  loop:
+  - meson
+  - ninja-build
+  become: true
+  notify:
+  - Reboot

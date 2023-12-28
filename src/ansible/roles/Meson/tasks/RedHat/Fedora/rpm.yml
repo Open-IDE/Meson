@@ -1,0 +1,9 @@
+---
+
+- name: Install Meson
+  become: true
+  ansible.builtin.dnf:
+    name:
+    - meson
+    - ninja-build
+    state: latest

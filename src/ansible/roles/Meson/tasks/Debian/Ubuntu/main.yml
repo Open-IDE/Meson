@@ -1,0 +1,7 @@
+---
+- name: Install Meson
+  ansible.builtin.apt:
+    pkg:
+    - meson
+    - ninja-build
+  become: true
